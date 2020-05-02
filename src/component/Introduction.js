@@ -55,7 +55,7 @@ export default function Basicstatue(props) {
               {post.description}
             </Typography>
             <Button variant="contained"  color='primary' target="_blank"  href='https://drive.google.com/file/d/1_LgUivvLvgircTTxKdPuULO2PecJnMi0/view'>
-            Download CVs
+            Download CV
             </Button>
           </div>
         </Grid>

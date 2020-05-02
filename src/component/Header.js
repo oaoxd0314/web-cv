@@ -81,17 +81,26 @@ export default function Header(props) {
     <>
       <Toolbar className={classes.toolbar}>
         <Button
-          size="small"
-          aria-controls="customized-menu"
+          aria-controls="simple-menu"
           aria-haspopup="true"
-          variant="contained"
-          color="primary"
           onClick={handleClick}
         >
           <IconButton>
             <DehazeIcon />
           </IconButton>
         </Button>
+
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          {sections.map((section) => (
+            <MenuItem onClick={handleClose}>{section.title}</MenuItem>
+          ))}
+        </Menu>
 
         <Typography
           component="h2"
@@ -109,48 +118,7 @@ export default function Header(props) {
         component="nav"
         variant="dense"
         className={classes.toolbarSecondary}
-      >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            className={classes.toolbarLink}
-          >
-            {section.title}
-          </Link>
-        ))}
-      </Toolbar>
-
-      <StyledMenu
-        id="customized-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <StyledMenuItem>
-          <ListItemIcon>
-            <SendIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Sent mail" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <DraftsIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Drafts" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Inbox" />
-        </StyledMenuItem>
-      </StyledMenu>
-      
+      />
     </>
   );
 }

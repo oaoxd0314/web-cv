@@ -4,7 +4,6 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { Timeline, Event } from "react-timeline-scribble";
 
-
 export default function Experience(props) {
   const { title, posts } = props;
   return (
@@ -12,19 +11,15 @@ export default function Experience(props) {
       <Typography component="h1" variant="h5" align="left">
         {title}
       </Typography>
-      <Container>
+      <Container align="center">
         {posts.map((posts) => (
-          <Timeline>
+          <Timeline >
             <Event
               interval={posts.year}
               title={posts.title}
               subtitle={posts.subtitle}
             >
-<Typography>
-  {posts.post}
-</Typography>
-                
-
+              <Typography>{posts.post}</Typography>
             </Event>
           </Timeline>
         ))}

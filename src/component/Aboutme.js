@@ -5,23 +5,19 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Image from "react-bootstrap/Image";
-import { Paper } from "@material-ui/core";
+import { Paper, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  sidebarAboutBox: {
-    marginLeft: theme.spacing(3),
+  layout: {
+    marginLeft: theme.spacing(4),
     marginTop: theme.spacing(3),
   },
-  overlay: {
+  top: {
     marginTop: theme.spacing(4),
   },
-  divider: {
-    margin: theme.spacing(2, 0),
+  left: {
+    marginLeft: theme.spacing(4),
   },
-  paper: {
-    Color: theme.palette.grey[200],
-  },
-  post: {},
 }));
 
 export default function Aboutme(props) {
@@ -39,17 +35,13 @@ function Text(props) {
   const classes = useStyles();
   return (
     <Grid item xs={12} md={8}>
-      <div className={classes.overlay}>
-        <Grid xs={12} md={6}>
-          <Typography component="h1" variant="h5" align='left'>
+      <div className={classes.top}>
+          <Typography component="h1" variant="h5" align='center'>
             {title}
           </Typography>
-        </Grid>
-        <Grid xs={12} md={8}>
-          <Typography variant="subtitle1" paragraph align="left">
+          <Typography variant="subtitle1" paragraph align="center">
             {post}
           </Typography>
-        </Grid>
       </div>
     </Grid>
   );
@@ -61,8 +53,9 @@ function Person(props) {
   const classes = useStyles();
   return (
     <Grid item xs={12} md={4}>
-      <Image src={img} roundedCircle width="123" height="123" />
-      <Container className={classes.sidebarAboutBox}>
+      <Image src={img} roundedCircle width="123" height="123" className={classes.left}/>
+      <Container className={classes.layout}>
+
         {social.map((network) => (
           <Link
             display="block"
@@ -83,3 +76,4 @@ function Person(props) {
     </Grid>
   );
 }
+
