@@ -1,8 +1,9 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+
 import { Timeline, Event } from "react-timeline-scribble";
+import { Icon } from "@material-ui/core";
 
 export default function Experience(props) {
   const { title, posts } = props;
@@ -11,7 +12,8 @@ export default function Experience(props) {
       <Typography component="h1" variant="h5" align="left">
         {title}
       </Typography>
-      <Container align="center">
+      <Container align="center" >
+
         {posts.map((posts) => (
           <Timeline >
             <Event
@@ -23,6 +25,7 @@ export default function Experience(props) {
             </Event>
           </Timeline>
         ))}
+          
       </Container>
     </>
   );

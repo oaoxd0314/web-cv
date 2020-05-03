@@ -5,7 +5,7 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Image from "react-bootstrap/Image";
-import { Paper, Button } from "@material-ui/core";
+
 
 const useStyles = makeStyles((theme) => ({
   layout: {

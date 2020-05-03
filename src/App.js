@@ -3,10 +3,13 @@ import Introduction from "./component/Introduction";
 import { makeStyles } from "@material-ui/core/styles";
 import Aboutme from "./component/Aboutme";
 import Experience from "./component/Experience";
-
 import Footer from "./component/Footer";
 import Header from "./component/Header";
 import { Container, Grid } from "@material-ui/core";
+import SchoolIcon from '@material-ui/icons/School';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import CodeIcon from '@material-ui/icons/Code';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Mainpost from "./img/Smart-City.jpg";
 import Me from "./img/me1.png";
@@ -19,6 +22,7 @@ import CV from "./img/CV.pdf";
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(4),
+    
   },
 }));
 
@@ -89,25 +93,29 @@ const experience = [
     year: "2016 Sep",
     title: "國立高雄科技大學",
     subtitle: "開始就讀",
-    post: "#EmojiEventsIcon",
+    icon: SchoolIcon,
+    post:'於2016年就讀國立高雄科技大學資訊管理系(原高雄應用科技大學)',
   },
   {
     year: "2017 Dec - 2018 Dec",
     title: "資訊管理系學會",
     subtitle: "任職期間",
-    post: "#HowToRegIcon",
+    icon: BusinessCenterIcon,
+    post:'在此期間累積多次舉辦多次中小型活動的經驗，包括企劃書撰寫、場地布置、經費估算、流程設計、團隊合作和解決問題等等',
   },
   {
     year: "2018 Jun - 2019 May",
     title: "專題競賽",
     subtitle: "wadon",
-    post: "#CodeIcon",
+    icon: CodeIcon,
+    post:'採用flutter做跨系統的專案，此專案旨在設計一個資訊流通的平台，讓高科大的活動資訊能夠更容易舉辦和執行。',
   },
   {
     year: "2020 Jun",
     title: "國立高雄科技大學",
     subtitle: "畢業",
-    post: "#FlightTakeoffIcon",
+    icon: FlightTakeoffIcon,
+    post:'於2020年畢業於國立高雄科技大學，熟悉前端網頁架構、撰寫以及部分後端設計和資料庫鑽寫連結。'
   },
 ];
 

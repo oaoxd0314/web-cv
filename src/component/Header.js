@@ -5,15 +5,10 @@ import DehazeIcon from "@material-ui/icons/Dehaze";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
-import { withStyles } from "@material-ui/core/styles";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import DraftsIcon from "@material-ui/icons/Drafts";
-import SendIcon from "@material-ui/icons/Send";
+import { Link,BrowserRouter } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -32,36 +27,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const StyledMenu = withStyles({
-  paper: {
-    border: "1px solid #d3d4d5",
-  },
-})((props) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: "bottom",
-      horizontal: "center",
-    }}
-    transformOrigin={{
-      vertical: "top",
-      horizontal: "center",
-    }}
-    {...props}
-  />
-));
-
-const StyledMenuItem = withStyles((theme) => ({
-  root: {
-    "&:focus": {
-      backgroundColor: theme.palette.primary.main,
-      "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-        color: theme.palette.common.white,
-      },
-    },
-  },
-}))(MenuItem);
 
 export default function Header(props) {
   const classes = useStyles();
@@ -79,7 +44,8 @@ export default function Header(props) {
 
   return (
     <>
-      <Toolbar className={classes.toolbar}>
+    <BrowserRouter>
+    <Toolbar className={classes.toolbar}>
         <Button
           aria-controls="simple-menu"
           aria-haspopup="true"
@@ -98,7 +64,7 @@ export default function Header(props) {
           onClose={handleClose}
         >
           {sections.map((section) => (
-            <MenuItem onClick={handleClose}>{section.title}</MenuItem>
+            <MenuItem onClick={handleClose} href={section.url}>{section.title}</MenuItem>
           ))}
         </Menu>
 
@@ -110,7 +76,9 @@ export default function Header(props) {
           noWrap
           className={classes.toolbarTitle}
         >
-          {title}
+        <Link to='/'>
+        {title}
+        </Link>
         </Typography>
       </Toolbar>
 
@@ -119,6 +87,7 @@ export default function Header(props) {
         variant="dense"
         className={classes.toolbarSecondary}
       />
-    </>
+    </BrowserRouter>
+      </>
   );
 }
