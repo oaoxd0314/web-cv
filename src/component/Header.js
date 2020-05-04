@@ -64,7 +64,12 @@ export default function Header(props) {
           onClose={handleClose}
         >
           {sections.map((section) => (
-            <MenuItem onClick={handleClose} href={section.url}>{section.title}</MenuItem>
+            <MenuItem onClick={handleClose} >
+            <Link to={section.url}>
+            {section.title}
+            </Link>
+
+            </MenuItem>
           ))}
         </Menu>
 

@@ -27,16 +27,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: "Technology", url: "#" },
-  { title: "Design", url: "#" },
-  { title: "Culture", url: "#" },
-  { title: "Business", url: "#" },
-  { title: "Politics", url: "#" },
-  { title: "Opinion", url: "#" },
-  { title: "Science", url: "#" },
-  { title: "Health", url: "#" },
-  { title: "Style", url: "#" },
-  { title: "Travel", url: "#" },
+  { title: "Technology", url: "/Technology" },
+  { title: "Design", url: "/Design" },
+  { title: "Culture", url: "/Culture" },
+  { title: "Business", url: "/Business" },
+  { title: "Politics", url: "/Politics" },
+  { title: "Opinion", url: "/Opinion" },
+  { title: "Science", url: "/Science" },
+  { title: "Health", url: "/Health" },
+  { title: "Style", url: "/Style" },
+  { title: "Travel", url: "/Travel" },
 ];
 
 const mainimg = {
