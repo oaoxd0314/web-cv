@@ -14,10 +14,10 @@ You will also see any lint errors in the console.
 
 ### construct
 
--APP
----Detail
----CV
----Post
+*APP
+*Detail
+-CV
++Post
 
 ### module
 -Router 
