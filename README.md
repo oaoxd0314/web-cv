@@ -14,21 +14,21 @@ You will also see any lint errors in the console.
 
 ### construct
 
-*APP
-*Detail
--CV
-+Post
+* APP
+    * Detail
+    * CV
+    * Post
 
 ### module
--Router 
--material-ui
--react-timeline-scribble
--react-dom
--bootstrap
+* Router 
+* material-ui
+* react-timeline-scribble
+* react-dom
+* bootstrap
 
 ### todolist
--Weekly code note post
--comment
--navbar
--Bread crumbs
--online website
+* Weekly code note post
+* comment
+* navbar
+* Bread crumbs
+* online website
