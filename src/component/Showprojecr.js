@@ -29,7 +29,7 @@ export default function Showproject(props) {
   const { post } = props;
   
   const handleClick = (event) => {
-    props.history.push("/Detail");
+    window.location.assign('/Detail')
   };
 
 

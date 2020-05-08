@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation,
+} from "react-router-dom";
 import Introduction from "./component/Introduction";
 import { makeStyles } from "@material-ui/core/styles";
 import Aboutme from "./component/Aboutme";
@@ -18,6 +27,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import Showprojecr from "./component/Showprojecr";
 import CV from "./img/CV.pdf";
+import Detail from "./component/Detail"
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -130,6 +140,18 @@ export default function App() {
   const classes = useStyles();
   return (
     <>
+    <Switch>
+    <Route path='/a'>
+    <Detail />
+    </Route>
+    <Route path='/b'>
+    <Detail />
+    </Route>
+    <Route path='/c'>
+    <Detail />
+    </Route>
+    
+    </Switch>
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Web CV" sections={sections} />
