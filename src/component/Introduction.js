@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
+import CV from "../img/CV.pdf"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +55,7 @@ export default function Basicstatue(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Button variant="contained"  color='primary' target="_blank"  href='https://drive.google.com/file/d/1_LgUivvLvgircTTxKdPuULO2PecJnMi0/view'>
+            <Button variant="contained"  color='primary' target="_blank"  href={CV}>
             Download CV
             </Button>
           </div>
