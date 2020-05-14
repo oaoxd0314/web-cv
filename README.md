@@ -19,12 +19,15 @@ You will also see any lint errors in the console.
     * CV
     * Post
 
-### module
-* Router 
+### package
+* react-router
+* react-router-native
+* react-router-dom
 * material-ui
 * react-timeline-scribble
 * react-dom
 * bootstrap
+* history
 
 ### todolist
 * Weekly code note post

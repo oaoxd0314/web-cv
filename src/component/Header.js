@@ -43,6 +43,10 @@ export default function Header(props) {
     setAnchorEl(null);
   };
 
+  const back =()=>{
+    window.location.assign('/')
+  }
+
   return (
     <>
     <BrowserRouter>
@@ -82,9 +86,10 @@ export default function Header(props) {
           noWrap
           className={classes.toolbarTitle}
         >
-        <Link to='/'>
+        <Link onClick={back}>
         {title}
         </Link>
+
         </Typography>
       </Toolbar>
 

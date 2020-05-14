@@ -3,7 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import Detail from "./component/Detail"
+import Detail from "./component/Detail";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme";
 import {
@@ -15,21 +15,20 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
+import history from "./history";
 
 ReactDOM.render(
   <React.StrictMode>
-  <Router>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path="/Detail">
-        <Detail />
-        </Route>
-      </Switch>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Switch>
+          <Route history={history}>
+            <Route exact path="/" component={App}></Route>
+            <Route path="/Detail" component={Detail}></Route>
+          </Route>
+        </Switch>
+      </ThemeProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Detail from '../component/Detail';
 import { makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter, Route, Link } from "react-router-dom"
@@ -26,19 +26,25 @@ const useStyles = makeStyles({
 
 export default function Showproject(props) {
   const classes = useStyles();
+  const data = {}
+  const path = {pathname:'/Detail',state:data}
   const { post } = props;
+  const [count,setpost]=useState(100);
   
   const handleClick = (event) => {
+    setpost(event)
+    alert(count)
     window.location.assign('/Detail')
-  };
-
+    
+  }
 
   return (
     <BrowserRouter>
     <Grid item xs={12} md={4}>
        <Card className={classes.cardMedia}>
+       <p>You clicked {count} times</p>
 
-      <CardActionArea onClick={(props)=>handleClick()}>
+      <CardActionArea onClick={()=>handleClick({count})}>
       <CardMedia
           component="img"
           alt="Contemplative Reptile"
