@@ -1,36 +1,39 @@
 import React from "react";
-import Introduction from "./component/Introduction";
 import { makeStyles } from "@material-ui/core/styles";
-import Aboutme from "./component/Aboutme";
-import Experience from "./component/Experience";
-import Footer from "./component/Footer";
-import Header from "./component/Header";
+import Introduction from "../Introduction";
+import Aboutme from "../Aboutme";
+import Experience from "../Experience";
+import Footer from "../Footer";
+import Header from "../Header";
+import Showprojecr from "../Showprojecr";
 import { Container, Grid } from "@material-ui/core";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Showprojecr from "./component/Showprojecr";
-import CV from "./img/CV.pdf";
-import Detail from "./component/Detail"
-import {sections,mainimg,aboutme,project,experience,footer,titles} from "./component/data"
+import CV from "../../img/CV.pdf";
+
+import {
+  sections,
+  mainimg,
+  aboutme,
+  project,
+  experience,
+  footer,
+  titles,
+} from "../data";
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(4),
-    
   },
   space: {
-    '& > * + *': {
+    "& > * + *": {
       marginLeft: theme.spacing(2),
     },
   },
 }));
 
-
-
-export default function App() {
+const Home = () => {
   const classes = useStyles();
   return (
     <>
-      <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Web CV" sections={sections} />
         <main>
@@ -57,6 +60,10 @@ export default function App() {
         </main>
       </Container>
       <Footer post={footer} />
+
+      <div className="routes"></div>
     </>
   );
 }
+
+export default Home;

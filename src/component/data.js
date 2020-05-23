@@ -55,26 +55,26 @@ import EmailIcon from "@material-ui/icons/Email";
     {
       title: "Wadon 高科資訊平台",
       description:
-        "This is a wider card with supporting text below as a natural lead-in to additional content.",
+        "code by flutter",
       image: "https://source.unsplash.com/random",
       url: "https://github.com/oaoxd0314/wadon_main",
     },
     {
       title: "flask-practice",
       description:
-        "This is a wider card with supporting text below as a natural lead-in to additional content.",
+        "udemy course practice",
       image: "https://source.unsplash.com/random",
       url: "https://github.com/oaoxd0314/flask-practice",
     },
     {
       title: "MyWebCV",
       description:
-        "This is a wider card with supporting text below as a natural lead-in to additional content.",
+        "this code open soucre",
       image: "https://source.unsplash.com/random",
       url: "https://github.com/oaoxd0314/web-cv",
     },
   ];
-
+  
   export const experience = [
     {
       year: "2016 Sep",
