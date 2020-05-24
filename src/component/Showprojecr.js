@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
-import Detail from '../component/Detail';
 import { makeStyles } from '@material-ui/core/styles';
-import { BrowserRouter, Route, Link } from "react-router-dom"
+import { BrowserRouter, } from "react-router-dom"
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';

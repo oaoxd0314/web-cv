@@ -3,6 +3,7 @@ import { Container } from "@material-ui/core";
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import {footer} from "./data";
 
 const useStyles = makeStyles((theme) => ({
     footer: {
@@ -14,12 +15,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer(props) {
   const classes = useStyles();
-  const {post} = props;
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
-          {post.title}
+          {footer.title}
         </Typography>
         <Typography
           variant="subtitle1"
@@ -27,7 +27,7 @@ export default function Footer(props) {
           color="textSecondary"
           component="p"
         >
-          {post.description}
+          {footer.description}
         </Typography>
         <Copyright />
       </Container>

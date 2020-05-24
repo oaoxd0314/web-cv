@@ -7,17 +7,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import Showprojecr from "../Showprojecr";
 import { Container, Grid } from "@material-ui/core";
-import CV from "../../img/CV.pdf";
-
-import {
-  sections,
-  mainimg,
-  aboutme,
-  project,
-  experience,
-  footer,
-  titles,
-} from "../data";
+import { project, titles } from "../data";
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -35,19 +25,14 @@ const Home = () => {
   return (
     <>
       <Container maxWidth="lg">
-        <Header title="Web CV" sections={sections} />
+        <Header />
         <main>
-          <Introduction post={mainimg} CV={CV} />
+          <Introduction />
           <Grid container>
-            <Aboutme
-              title={aboutme.title}
-              post={aboutme.post}
-              img={aboutme.img}
-              social={aboutme.social}
-            />
+            <Aboutme />
           </Grid>
           <Grid container className={classes.mainGrid}>
-            <Experience title="Experience" posts={experience} />
+            <Experience />
           </Grid>
           <h2 align="left" className={classes.mainGrid}>
             {titles.title}
@@ -59,11 +44,11 @@ const Home = () => {
           </Grid>
         </main>
       </Container>
-      <Footer post={footer} />
+      <Footer />
 
       <div className="routes"></div>
     </>
   );
-}
+};
 
 export default Home;

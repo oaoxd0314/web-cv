@@ -5,7 +5,7 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Image from "react-bootstrap/Image";
-
+import { aboutme } from "../component/data";
 
 const useStyles = makeStyles((theme) => ({
   layout: {
@@ -20,42 +20,47 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Aboutme(props) {
-  const { title, post, social, img } = props;
-  return (
+export default class Aboutme extends React.Component {
+  render() {
+    return (
       <Grid container spacing={8}>
-        <Text post={post} title={title} />
-        <Person img={img} social={social} />
+        <Text post={aboutme.post} title={aboutme.title} />
+        <Person img={aboutme.img} social={aboutme.social} />
       </Grid>
-  );
+    );
+  }
 }
 
-function Text(props) {
+const Text = (props) => {
   const { title, post } = props;
   const classes = useStyles();
   return (
     <Grid item xs={12} md={8}>
       <div className={classes.top}>
-          <Typography component="h1" variant="h5" align='center'>
-            {title}
-          </Typography>
-          <Typography variant="subtitle1" paragraph align="center">
-            {post}
-          </Typography>
+        <Typography component="h1" variant="h5" align="center">
+          {title}
+        </Typography>
+        <Typography variant="subtitle1" paragraph align="center">
+          {post}
+        </Typography>
       </div>
     </Grid>
   );
-}
+};
 
-function Person(props) {
+const Person = (props) => {
   const { img, social } = props;
-
   const classes = useStyles();
   return (
     <Grid item xs={12} md={4}>
-      <Image src={img} roundedCircle width="123" height="123" className={classes.left}/>
+      <Image
+        src={img}
+        roundedCircle
+        width="123"
+        height="123"
+        className={classes.left}
+      />
       <Container className={classes.layout}>
-
         {social.map((network) => (
           <Link
             display="block"
@@ -75,5 +80,4 @@ function Person(props) {
       </Container>
     </Grid>
   );
-}
-
+};

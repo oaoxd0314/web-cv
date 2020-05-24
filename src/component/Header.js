@@ -7,9 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import { Link,BrowserRouter } from "react-router-dom";
-
-
+import { Link, BrowserRouter } from "react-router-dom";
+import {sections} from "./data";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -28,10 +27,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function Header(props) {
   const classes = useStyles();
-  const { sections, title } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -43,62 +40,56 @@ export default function Header(props) {
     setAnchorEl(null);
   };
 
-  const back =()=>{
-    window.location.assign('/')
-  }
+  const back = () => {
+    window.location.assign("/");
+  };
 
   return (
     <>
-    <BrowserRouter>
-    <Toolbar className={classes.toolbar}>
-        <Button
-          aria-controls="simple-menu"
-          aria-haspopup="true"
-          onClick={handleClick}
-        >
-          <IconButton>
-            <DehazeIcon />
-          </IconButton>
-        </Button>
+      <BrowserRouter>
+        <Toolbar className={classes.toolbar}>
+          <Button
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+          >
+            <IconButton>
+              <DehazeIcon />
+            </IconButton>
+          </Button>
 
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          {sections.map((section) => (
-            <MenuItem onClick={handleClose} >
-            <Link to={section.url}>
-            {section.title}
-            </Link>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            {sections.map((section) => (
+              <MenuItem onClick={handleClose}>
+                <Link to={section.url}>{section.title}</Link>
+              </MenuItem>
+            ))}
+          </Menu>
 
-            </MenuItem>
-          ))}
-        </Menu>
+          <Typography
+            component="h2"
+            variant="h5"
+            color="inherit"
+            align="center"
+            noWrap
+            className={classes.toolbarTitle}
+          >
+            <Link onClick={back}>Web CV</Link>
+          </Typography>
+        </Toolbar>
 
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          className={classes.toolbarTitle}
-        >
-        <Link onClick={back}>
-        {title}
-        </Link>
-
-        </Typography>
-      </Toolbar>
-
-      <Toolbar
-        component="nav"
-        variant="dense"
-        className={classes.toolbarSecondary}
-      />
-    </BrowserRouter>
-      </>
+        <Toolbar
+          component="nav"
+          variant="dense"
+          className={classes.toolbarSecondary}
+        />
+      </BrowserRouter>
+    </>
   );
 }
