@@ -5,7 +5,7 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Image from "react-bootstrap/Image";
-import { aboutme } from "../component/data";
+import data from "../../../data/data";
 
 const useStyles = makeStyles((theme) => ({
   layout: {
@@ -24,8 +24,8 @@ export default class Aboutme extends React.Component {
   render() {
     return (
       <Grid container spacing={8}>
-        <Text post={aboutme.post} title={aboutme.title} />
-        <Person img={aboutme.img} social={aboutme.social} />
+        <Text post={data.aboutme.post} title={data.aboutme.title} />
+        <Person img={data.aboutme.img} social={data.aboutme.social} />
       </Grid>
     );
   }
@@ -60,20 +60,20 @@ const Person = (props) => {
         height="123"
         className={classes.left}
       />
+
       <Container className={classes.layout}>
         {social.map((network) => (
           <Link
             display="block"
             variant="body1"
             href={network.href}
-            key={network}
+            key={network.id}
             target="_blank"
           >
-            <Grid container xs={5}>
-              <Grid item>
-                <network.icon />
+            <Grid item xs={5}>
+              <Grid>
+                <network.icon /> {network.name}
               </Grid>
-              <Grid item>{network.name}</Grid>
             </Grid>
           </Link>
         ))}

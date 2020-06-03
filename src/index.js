@@ -4,16 +4,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import App from "./component/App.js";
-import theme from "./theme";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-  useLocation,
-} from "react-router-dom";
+import theme from "./component/theme";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <Router>

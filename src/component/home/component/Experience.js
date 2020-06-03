@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { Timeline, Event } from "react-timeline-scribble";
-import { experience } from "./data";
+import data from "../../../data/data";
 export default class Experience extends React.Component {
   render() {
     return (
@@ -11,8 +11,8 @@ export default class Experience extends React.Component {
           Experience
         </Typography>
         <Container align="center">
-          {experience.map((posts) => (
-            <Timeline>
+          {data.experience.map((posts) => (
+            <Timeline key={posts.id}>
               <Event
                 interval={posts.year}
                 title={posts.title}

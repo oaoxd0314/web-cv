@@ -5,8 +5,9 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { Button } from "@material-ui/core";
-import CV from "../img/CV.pdf";
-import { mainimg } from "./data";
+import CV from "../../../img/CV.pdf";
+import data from "../../../data/data";
+
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -43,14 +44,14 @@ export default function Basicstatue(props) {
   return (
     <Paper
       className={classes.mainFeaturedPost}
-      style={{ backgroundImage: `url(${mainimg.image})` }}
+      style={{ backgroundImage: `url(${data.mainimg.image})` }}
     >
       {/* Increase the priority of the hero background image */}
       {
         <img
           style={{ display: "none" }}
-          src={mainimg.image}
-          alt={mainimg.imageText}
+          src={data.mainimg.image}
+          alt={data.mainimg.imageText}
         />
       }
       <div className={classes.overlay} />
@@ -63,10 +64,10 @@ export default function Basicstatue(props) {
               color="inherit"
               gutterBottom
             >
-              {mainimg.title}
+              {data.mainimg.title}
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
-              {mainimg.description}
+              {data.mainimg.description}
             </Typography>
             <Button
               variant="contained"

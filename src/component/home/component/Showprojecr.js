@@ -1,6 +1,5 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { BrowserRouter, } from "react-router-dom"
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -9,7 +8,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import CardActions from '@material-ui/core/CardActions';
-
 
 const useStyles = makeStyles({
   card: {
@@ -25,25 +23,17 @@ const useStyles = makeStyles({
 
 export default function Showproject(props) {
   const classes = useStyles();
-  const data = {}
-  const path = {pathname:'/Detail',state:data}
   const { post } = props;
-  const [count,setpost]=useState(100);
   
-  const handleClick = (event) => {
-    setpost(event)
-    alert(count)
-    window.location.assign('/Detail')
-    
+  const handleClick = (id) => {
+    window.location.assign(`/${id}`)
   }
 
   return (
-    <BrowserRouter>
+    <>
     <Grid item xs={12} md={4}>
        <Card className={classes.cardMedia}>
-       <p>You clicked {count} times</p>
-
-      <CardActionArea onClick={()=>handleClick({count})}>
+      <CardActionArea onClick={()=>handleClick(post.id)}>
       <CardMedia
           component="img"
           alt="Contemplative Reptile"
@@ -68,9 +58,8 @@ export default function Showproject(props) {
           Watch On GitHub
         </Button>
       </CardActions>
-
     </Card>
     </Grid>
-    </BrowserRouter>
+    </>
   );
 }

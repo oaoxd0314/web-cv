@@ -1,0 +1,49 @@
+{
+  "sections": [
+    { "title": "Technology", "url": "/Technology" },
+    { "title": "Design", "url": "/Design" },
+    { "title": "Culture", "url": "/Culture" },
+    { "title": "Business", "url": "/Business" },
+    { "title": "Politics", "url": "/Politics" },
+    { "title": "Opinion", "url": "/Opinion" },
+    { "title": "Science", "url": "/Science" },
+    { "title": "Health", "url": "/Health" },
+    { "title": "Style", "url": "/Style" },
+    { "title": "Travel", "url": "/Travel" }
+  ],
+  "project": [
+    {
+      "id": "0",
+      "title": "Wadon 高科資訊平台",
+      "description": "為了解決高科大校內活動資訊不流通的問題而打造的跨平台App，使用flutter打造。使用者可依自身喜好訂閱有興趣的主辦單位，不遺漏任何有興趣的活動外，更可透過平台的活動推廣接觸更多不同領域的社團活動。主辦方經平台認證後得以在首頁進行活動推廣，讓活動不再因為性質小眾而被埋沒，此外，主辦方也可觀測後台資訊，掌握活動報名人的相關資訊，省去已往繁瑣的報名流程，更可以減少主辦方資料處理的流程。",
+      "install": "write done how to start this project",
+      "image": "https://source.unsplash.com/random",
+      "url": "https://github.com/oaoxd0314/wadon_main",
+      "demo":"show some app info"
+    },
+    {
+      "id": "1",
+      "title": "flask-practice",
+      "description": "udemy course practice",
+      "install": "write done how to start this project",
+      "image": "https://source.unsplash.com/random",
+      "url": "https://github.com/oaoxd0314/flask-practice",
+      "demo":"show some app info"
+    },
+    {
+      "id": "2",
+      "title": "MyWebCV",
+      "description": "this code open soucre",
+      "install": "write done how to start this project",
+      "image": "https://source.unsplash.com/random",
+      "url": "https://github.com/oaoxd0314/web-cv",
+      "demo":"show some app info"
+    }
+  ],
+  "footer": {
+    "title": "Chris's Blog",
+    "description": "Ever tried. Ever Fail. Try Again. Fail Again. Fail Better."
+  },
+
+  "titles": { "title": "Showprojecr" }
+}
