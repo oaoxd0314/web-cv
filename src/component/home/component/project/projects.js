@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-const Writing = () => {
+const Projects = () => {
   return (
     <>
       <Container maxWidth="lg">
@@ -16,4 +16,4 @@ const Writing = () => {
   );
 };
 
-export default Writing;
+export default Projects;

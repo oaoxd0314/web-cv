@@ -10,16 +10,8 @@ import EmailIcon from "@material-ui/icons/Email";
 
 const data = {
   sections: [
-    { id: "0", title: "Technology", url: "/Technology" },
-    { id: "1", title: "Design", url: "/Design" },
-    { id: "2", title: "Culture", url: "/Culture" },
-    { id: "3", title: "Business", url: "/Business" },
-    { id: "4", title: "Politics", url: "/Politics" },
-    { id: "5", title: "Opinion", url: "/Opinion" },
-    { id: "6", title: "Science", url: "/Science" },
-    { id: "7", title: "Health", url: "/Health" },
-    { id: "8", title: "Style", url: "/Style" },
-    { id: "9", title: "Travel", url: "/Travel" },
+    { id: "0", title: "Blog", url: "/blog" },
+    { id: "1", title: "Projects", url: "/projects" },
   ],
   mainimg: {
     title: "Hi,我是 Chris ",

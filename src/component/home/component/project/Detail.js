@@ -38,6 +38,8 @@ export default function Detail(props) {
     }, // 當 params.pid 變更就執行
     [params.pid]
   );
+
+
   console.log(pdata.install)
 
   const classes = useStyles();

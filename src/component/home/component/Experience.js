@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { Timeline, Event } from "react-timeline-scribble";
 import data from "../../../data/data";
+
 export default class Experience extends React.Component {
   render() {
     return (
