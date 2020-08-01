@@ -8,7 +8,7 @@ export default class Experience extends React.Component {
   render() {
     return (
       <>
-        <Typography component="h1" variant="h5" align="left">
+        <Typography variant="h4" align="left">
           Experience
         </Typography>
         <Container align="center">

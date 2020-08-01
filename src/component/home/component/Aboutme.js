@@ -31,13 +31,12 @@ export default class Aboutme extends React.Component {
   }
 }
 
-const Text = (props) => {
-  const { title, post } = props;
+const Text = ({ title, post }) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} md={8}>
       <div className={classes.top}>
-        <Typography component="h1" variant="h5" align="center">
+        <Typography variant="h4" align="center">
           {title}
         </Typography>
         <Typography variant="subtitle1" paragraph align="center">
@@ -48,8 +47,7 @@ const Text = (props) => {
   );
 };
 
-const Person = (props) => {
-  const { img, social } = props;
+const Person = ({ img, social }) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} md={4}>

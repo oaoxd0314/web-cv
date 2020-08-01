@@ -7,7 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import Index from "./component/index";
 import Projects from "./component/project/projects";
 
-function  Home() {
+export default function  Home() {
   useEffect(
     () => {
       // componentDidMount is here!
@@ -33,4 +33,4 @@ function  Home() {
   );
 };
 
-export default Home;
+

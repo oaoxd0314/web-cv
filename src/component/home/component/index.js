@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
- const Mainpage = () => {
+const Mainpage = () => {
   const classes = useStyles();
   return (
     <>
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
         <Grid container className={classes.mainGrid}>
           <Experience />
         </Grid>
+
         <h2 align="left" className={classes.mainGrid}>
           {data.titles.title}
         </h2>
@@ -41,6 +42,6 @@ const useStyles = makeStyles((theme) => ({
       </main>
     </>
   );
-}
+};
 
 export default Mainpage;
