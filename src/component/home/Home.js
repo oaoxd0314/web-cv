@@ -21,7 +21,7 @@ export default function  Home() {
   return (
     <>
       <Container maxWidth="lg">
-        <Heayader title="web cv" />
+        <Header title="web cv" />
         <Switch>
           <Route path="/projects" component={Projects} />
           <Route path="/:pid" component={Detail} />
