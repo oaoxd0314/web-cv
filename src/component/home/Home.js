@@ -23,8 +23,8 @@ export default function  Home() {
       <Container maxWidth="lg">
         <Header title="web cv" />
         <Switch>
-          <Route path="/projects" component={Projects} />
-          <Route path="/:pid" component={Detail} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/:pid" component={Detail} />
           <Route path="/" component={Index} />
         </Switch>
       </Container>
