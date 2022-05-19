@@ -35,6 +35,3 @@ You will also see any lint errors in the console.
 * navbar
 * Bread crumbs
 * online website
-
-### NEWS.PY
-* category: cast to nvarchar?
